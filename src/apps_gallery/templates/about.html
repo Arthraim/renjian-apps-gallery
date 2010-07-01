@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0064)http://www.frogsthemes.com/demo/foliogrid/illustration/notebook/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>关于 | ABOUT</title>
+
+<!-- Javascript -->
+<script type="text/javascript" src="/media/theme/jquery.js"></script>
+<script type="text/javascript"
+	src="/media/theme/jquery.jfade.1.0.min.js"></script>
+<script type="text/javascript" src="/media/theme/jquery.masonry.min.js"></script>
+
+
+<!-- CSS -->
+<link href="/media/theme/style.css" rel="stylesheet" type="text/css"
+	media="screen">
+
+<script language="javascript">
+
+        $(document).ready(function() {
+        
+            $(".post").jFade({
+                trigger: "mouseover",
+                property: 'background',
+                start: 'ffffff',
+                end: 'eeeeee',
+                steps: 8,
+                duration: 8
+            }).jFade({
+                trigger: "mouseout",
+                property: 'background',
+                start: 'eeeeee',
+                end: 'ffffff',
+                steps: 8,
+                duration: 8
+            });
+            
+            // set width of posts and initiate stacking
+            $('.post').css('width','220px');
+            $('.postWrap').masonry({
+                singleMode: true,
+                itemSelector: '.post' 
+            });
+            
+        });
+        
+        </script>
+
+<script>
+          $(document).ready(function(){
+            $(".post").css({opacity: 0});
+            $(".post").fadeTo("slow", 1); 
+          });
+         </script>
+
+
+<script type="text/javascript" src="/media/theme/lifestream.js"></script>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/media/theme/lifestream.css">
+<link rel="shortlink" href="http://wp.me/sOgbH-notebook">
+<style type="text/css">
+#bubble_arrow {
+	padding: 0px margin :     0px;
+}
+
+#bubble_sel {
+	visibility: hidden;
+	position: absolute;
+	z-index: 9998
+}
+
+#bubble {
+	opacity: .93;
+	position: absolute;
+	display: block;
+	z-index: 9998;
+	font-family: Lucida grande, arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+#bubble_cont {
+	padding: 7px 7px 7px 7px;
+	z-index: 9998;
+	-webkit-border-radius: 7px;
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<div class="blogInfo">
+<p><a href="/">人 间 应 用 画 廊</a> | RENJIAN APPS GALLERY</p>
+</div>
+<div class="pages">
+<h3>Menu</h3>
+<ul>
+	<li class="first"><a href="/">首页</a></li>
+	<li class="page_item page-item-2"><a href="/about/" title="About">关于</a></li>
+	<li class="page_item page-item-3"><a href="/how-to-submit/"
+		title="How To Submit">我也想添加应用</a></li>
+</ul>
+</div>
+
+</div>
+
+<div id="foliogrid"></div>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#foliogrid .post').click(function(){
+            href = $(this).children('div').children("a[rel='bookmark']").attr('href');
+            if (href != undefined)
+            {
+                window.location = href; 
+            }
+        }).hover(function(){
+            $(this).css('cursor', 'pointer');
+        }, function(){
+            $(this).css('cursor', 'default');        
+        });
+    });
+    </script>
+
+
+<div id="coreContent" class="clearfix">
+
+<div>
+
+
+<div id="content">
+<div class="whiteBlock clearfix">
+<div>
+
+<div class="whiteBlock-content">
+<h1><a href="javascript:void(0)">关 于</a> | About</h1>
+<p>人间应用画廊是一个展示利用人间网API开发的应用站点。<br>
+它起到了对应用的展示、导航、提供下载等多种功能。
+它是为所有有爱的第三方程序员所设计的，就像无法在Apple AppStore上线的应用可以载Cydia中上线一样，
+人间应用画廊，零门槛，欢迎所有的开发者提出展示应用的要求。
+这里收录的应用，可能被人间网官方所肯定，在人间网的工具页面中罗列了，
+更希望，一些简单的但是充满智慧和创意的，且并没有收录到人间网官方工具页面上的应用能够在这里得到展示。
+就像导航网站一样，让人间应用画廊成为人间网API应用的入口，让所有独立开发者的宝贵成果得到最大的关注。</p>
+<p>人间应用画廊由<a href="http://arthraim.cn/" target="_blank">Arthur Wang</a> 
+(<a href="http://renjian.com/arthraim" target="_blank">Arthraim</a>)个人开发。<br>
+另外本人——Arthur，是人间团队的一员，但此站点以个人名义开发，任何行为与人间网无关，最终解释权归本人所有 :)</p>
+<p>对于本站点有任何意见或建议，请联系arthraim@gmail.com。</p>
+<p>希望添加自己的应用到本站点的，欢迎前往<a href="/how-to-submit">这里</a>了解详情。</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- div id="sidebar">
+    <ul class="sidebar_list">
+        <li id="theme-switcher" class="widget widget_themeswitcher"><h2 class="widgettitle">Theme Switcher</h2>
+<ul id="themeswitcher">
+<li>
+       <select style="width:140px" name="themeswitcher" onchange="location.href=&#39;http://www.frogsthemes.com/demo/foliogrid/index.php?wptheme=&#39; + this.options[this.selectedIndex].value;">
+               <option value="FolioGrid" selected="selected">FolioGrid</option>
+               <option value="FolioGrid Dark">FolioGrid Dark</option>
+               <option value="FolioGrid Yellow">FolioGrid Yellow</option>
+       </select>
+</li>
+</ul></li>
+    </ul>
+</div --></div>
+
+
+<div id="footer" class="clearfix">
+<div class="left">
+<h3>Menu</h3>
+<ul>
+	<li class="first"><a
+		href="http://www.frogsthemes.com/demo/foliogrid">Home</a></li>
+	<li class="page_item page-item-2"><a
+		href="http://www.frogsthemes.com/demo/foliogrid/about/" title="About">About</a></li>
+</ul>
+<p>Produced by <a href="http://arthraim.cn/">Arthur Wang</a></p>
+</div>
+<p>Themed by <a href="http://www.frogsthemes.com/" target="_blank">FrogsThemes.com</a></p>
+</div>
+
+
+
+
+
+
+<script src="/media/theme/e-201022.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>

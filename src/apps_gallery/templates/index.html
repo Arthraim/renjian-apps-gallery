@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0042)http://www.frogsthemes.com/demo/foliogrid/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>人间应用画廊 | RENJIAN APPS GALLERY</title>
+
+<!-- Javascript -->
+<script type="text/javascript" src="/media/theme/jquery.js"></script>
+<script type="text/javascript" src="/media/theme/jquery.jfade.1.0.min.js"></script>
+<script type="text/javascript" src="/media/theme/jquery.masonry.min.js"></script>
+
+<!-- CSS -->
+<link href="/media/theme/style.css" rel="stylesheet" type="text/css"
+	media="screen">
+
+<script language="javascript">
+
+        $(document).ready(function() {
+        
+            $(".post").jFade({
+                trigger: "mouseover",
+                property: 'background',
+                start: 'ffffff',
+                end: 'eeeeee',
+                steps: 8,
+                duration: 8
+            }).jFade({
+                trigger: "mouseout",
+                property: 'background',
+                start: 'eeeeee',
+                end: 'ffffff',
+                steps: 8,
+                duration: 8
+            });
+            
+            // set width of posts and initiate stacking
+            $('.post').css('width','220px');
+            $('.postWrap').masonry({
+                singleMode: true,
+                itemSelector: '.post' 
+            });
+            
+        });
+        
+        </script>
+
+<script>
+          $(document).ready(function(){
+            $(".post").css({opacity: 0});
+            $(".post").fadeTo("slow", 1); 
+          });
+         </script>
+
+<script type="text/javascript" src="/media/theme/lifestream.js"></script>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="/media/theme/lifestream.css">
+<link rel="shortlink" href="http://wp.me/OgbH">
+<style type="text/css">
+#bubble_arrow {
+	padding: 0px margin :   0px;
+}
+
+#bubble_sel {
+	visibility: hidden;
+	position: absolute;
+	z-index: 9998
+}
+
+#bubble {
+	opacity: .93;
+	position: absolute;
+	display: block;
+	z-index: 9998;
+	font-family: Lucida grande, arial, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+#bubble_cont {
+	padding: 7px 7px 7px 7px;
+	z-index: 9998;
+	-webkit-border-radius: 7px;
+}
+</style>
+<!-- Google Anlytic -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8352384-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- /Google Anlytic -->
+</head>
+
+<body>
+
+<div id="header">
+<div class="blogInfo">
+<p><a href="/">人 间 应 用 画 廊</a> | RENJIAN APPS GALLERY</p>
+</div>
+<div class="pages">
+<h3>Menu</h3>
+<ul>
+	<li class="first"><a
+		href="/">首页</a></li>
+	<li class="page_item page-item-2"><a
+		href="/about/" title="About">关于</a></li>
+    <li class="page_item page-item-3"><a
+        href="/how-to-submit/" title="How To Submit">我也想添加应用</a></li>
+</ul>
+</div>
+
+<!-- 
+        <div class="categories">
+            <h3>Categories</h3>
+            <select name="cat" id="cat" class="postform">
+    <option value="-1">Select Category</option>
+    <option class="level-0" value="3">Graphic Design</option>
+    <option class="level-0" value="5">Illustration</option>
+    <option class="level-0" value="6">Digital Art</option>
+    <option class="level-0" value="7">Photography</option>
+    <option class="level-0" value="8">Painting</option>
+    <option class="level-0" value="9">Animation</option>
+    <option class="level-0" value="10">Motion</option>
+</select>
+
+        </div>
+        
+        <div class="categories">
+            
+            <h3>Archives</h3>
+            <select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+                <option value="">Select Month</option>
+                    <option value="http://www.frogsthemes.com/demo/foliogrid/2010/02/"> February 2010 &nbsp;(15)</option>
+ </select>
+        </div>  
+        
+        <div class="search">
+            <h3>Search</h3>
+            <form method="get" class="searchform" action="http://www.frogsthemes.com/demo/foliogrid/index.php">
+                <input type="text" value="Search term..." name="s" class="s" onblur="if(this.value==&#39;&#39;)this.value=&#39;Search term...&#39;;" onfocus="if(this.value==&#39;Search term...&#39;)this.value=&#39;&#39;;">
+            </form>
+        </div>
+        
+         --></div>
+
+<div id="foliogrid"></div>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#foliogrid .post').click(function(){
+            href = $(this).children('div').children("a[rel='bookmark']").attr('href');
+            if (href != undefined)
+            {
+                window.location = href; 
+            }
+        }).hover(function(){
+            $(this).css('cursor', 'pointer');
+        }, function(){
+            $(this).css('cursor', 'default');        
+        });
+    });
+    </script>
+
+
+
+
+
+<div class="postWrap" style="position: relative; height: 1172px;">
+
+
+{% for app in apps %}
+<div class="post">
+	<div>
+		<div class="post-header">
+		{% if app.homepage %}<a href="{{ app.homepage }}" target="_blank">
+		{% else %}{% if app.dowload_url %}<a href="{{ app.dowload_url }}" target="_blank">
+		{% endif %}{% endif %}
+		<img src="{% if app.thumbnail_url %}{{ app.thumbnail_url }}
+		          {% else %}/media/theme/nothumb.jpg{% endif %}" 
+		     width="200" height="200"> 
+		{% if app.homepage or app.dowload_url %}</a>{% endif %}
+		</div>
+	
+		<div class="post-content">
+		<h2><a href="{{ app.homepage }}" target="_blank">{{ app.name }}</a></h2>
+		<p>{{ app.intro }}</p>
+		{% if app.homepage or app.dowload_url or app.opensource %}
+		<blockquote>
+        {% if app.homepage %}<a href="{{ app.homepage }}" target="_blank">访问主页</a><br>{% endif %}
+        {% if app.dowload_url %}<a href="{{ app.dowload_url }}" target="_blank">下载应用</a><br>{% endif %}
+        {% if app.opensource %}<a href="{{ app.opensource }}" target="_blank">获取源代码</a><br>{% endif %}
+        </blockquote>
+        {% endif %}
+		</div>
+        <div class="post-footer">
+	        <small>当前版本：{{ app.version }}<br>
+			来自：
+		   {% for developer in app.developers.all %}
+			<a href="http://renjian.com/{{ developer.screen_name }}"
+				target="_blank">@{{ developer.screen_name }}</a>  
+		   {% endfor %}<br>
+            标签：
+           {% for tag in app.tags.all %}
+            <a href="javascript:void(0)"
+                target="_blank">{{ tag.name }}</a>  
+           {% endfor %}
+			</small></div>
+	
+	</div>
+	
+
+</div>
+<!--    -->
+{% endfor %}
+
+<div class="post copyright"
+	style="width: 220px; position: absolute; left: 696px; top: 1110px; opacity: 1;">
+	<div>
+	<p>Produced by Arthur Wang<br>from <a href="http://www.frogsthemes.com/" target="_blank">Arthraim.cn</a></p>
+	<p>Themed by <a href="http://www.frogsthemes.com/" target="_blank">FrogsThemes.com</a></p>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="/media/theme/e-201022.js" type="text/javascript"></script>
+<!-- <script type="text/javascript">
+st_go({blog:'11978629',v:'ext',post:'0'});
+var load_cmc = function(){linktracker_init(11978629,0,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>-->
+@<a href="http://renjian.com/arthraim" target="_blank">Arthraim</a>
+<img id="wpstats" src="/media/theme/g.gif" alt=""> 
+
+
+
+</body>
+</html>
